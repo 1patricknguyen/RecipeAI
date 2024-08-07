@@ -21,14 +21,13 @@ def create_recipe(ingredients):
 
 def link_recipe(ingredients):
     ingredients_list = ingredients["ingredients"]
-    prompt = f'''Give me links to online recipes with these ingredients I list: {ingredients_list}. Assume I have pantry spices. Additionally, these
-    recipes could have additional ingredients but try to keep it mostly within the list.
+    prompt = f'''Give me links to online recipes with these ingredients I list: {ingredients_list}. Prioritize reliable cooking websites with a proven track record. Assume I have common pantry spices. 
+    Recipes may include additional ingredients but should primarily focus on the provided list. Exclude links to Allrecipes, BudgetBytes, RecipeTinEats, and FoodNetwork. 
     Return this JSON schema {{"links: [{{"title": "string", "link": "URL"}}]}}
     Maximum 5 links.'''
     response = model.generate_content(prompt)
     return response.text
 
-ing = {"ingredients": "chicken, rice, soy sauce, garlic, ginger, green onions, sesame oil, sugar, cornstarch, vinegar, salt, pepper, oil"}
-print(create_recipe(ing))
+
                                                                        
 
