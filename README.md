@@ -9,10 +9,11 @@ WIP
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/project-name.git
+git clone <link>
 
 # Navigate to the project directory
 cd project-name
 
-# Install dependencies
-pip install -r requirements.txt  # for Python projects
+# There's more steps but I'll put them in later
+
+
